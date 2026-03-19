@@ -1,9 +1,54 @@
 body{
 margin:0;
 overflow:hidden;
+font-family:Courier New, monospace;
+
+/* Fondo espacial degradado */
+background: radial-gradient(circle at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+/* Estrellas del fondo */
+body::before{
+
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image:
+radial-gradient(2px 2px at 20px 30px, white, transparent),
+radial-gradient(2px 2px at 40px 70px, white, transparent),
+radial-gradient(2px 2px at 90px 40px, white, transparent),
+radial-gradient(2px 2px at 130px 80px, white, transparent),
+radial-gradient(2px 2px at 160px 30px, white, transparent);
+
+background-repeat: repeat;
+background-size: 200px 200px;
+
+opacity:0.6;
+z-index:-1;
 }
 
 canvas{
 display:block;
-background:#ff8;
+}
+
+/* HUD estilo arcade */
+#hud{
+
+position:absolute;
+top:20px;
+left:20px;
+
+color:#00ffe1;
+
+font-size:40px;
+
+text-shadow:
+0 0 10px #00ffe1,
+0 0 20px #00ffe1,
+0 0 40px #00ffe1;
+
 }
